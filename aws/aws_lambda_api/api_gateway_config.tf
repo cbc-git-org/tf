@@ -12,13 +12,14 @@ resource "aws_api_gateway_deployment" "this" {
   ]
 }
 
-resource "aws_api_gateway_stage" "this" {
+/*resource "aws_api_gateway_stage" "this" {
   stage_name    = "${var.stage_name}"
   description   = "${var.comment_prefix}${var.api_domain}"
   rest_api_id   = "${aws_api_gateway_rest_api.this.id}"
   deployment_id = "${aws_api_gateway_deployment.this.id}"
   tags          = "${var.tags}"
 }
+*/
 
 resource "aws_api_gateway_method_settings" "this" {
   rest_api_id = "${aws_api_gateway_rest_api.this.id}"
