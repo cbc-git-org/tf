@@ -78,7 +78,7 @@ resource "google_compute_address" "minecraft" {
 }
 
 # VM to run Minecraft, we use preemptable which will shutdown within 24 hours
-resource "google_compute_instance" "minecraft" {
+/*resource "google_compute_instance" "minecraft" {
   name         = "minecraft"
   machine_type = "n1-standard-1"
   zone         = local.zone
@@ -119,6 +119,7 @@ resource "google_compute_instance" "minecraft" {
     automatic_restart = false
   }
 }
+*/
 
 # Create a private network so the minecraft instance cannot access
 # any other resources.
